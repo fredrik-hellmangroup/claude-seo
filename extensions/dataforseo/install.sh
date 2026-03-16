@@ -5,10 +5,10 @@ set -euo pipefail
 # Wraps everything in main() to prevent partial execution on network failure
 
 main() {
-    SKILL_DIR="${HOME}/.claude/skills/seo-dataforseo"
-    AGENT_DIR="${HOME}/.claude/agents"
-    SEO_SKILL_DIR="${HOME}/.claude/skills/seo"
-    SETTINGS_FILE="${HOME}/.claude/settings.json"
+    SKILL_DIR="${HOME}/.copilot/skills/seo-dataforseo"
+    AGENT_DIR="${HOME}/.copilot/agents"
+    SEO_SKILL_DIR="${HOME}/.copilot/skills/seo"
+    SETTINGS_FILE="${HOME}/.copilot/settings.json"
 
     echo "════════════════════════════════════════"
     echo "║   DataForSEO Extension - Installer   ║"
@@ -135,7 +135,7 @@ with open(settings_path, 'w') as f:
 print('  ✓ MCP server configured in settings.json')
 " || {
         echo "  ⚠  Could not auto-configure MCP server."
-        echo "  Add the dataforseo server manually to ~/.claude/settings.json"
+        echo "  Add the dataforseo server manually to ~/.copilot/settings.json"
         echo "  See: extensions/dataforseo/docs/DATAFORSEO-SETUP.md"
     }
 

@@ -21,5 +21,5 @@ Only the latest version receives security updates.
 ## Security Practices
 
 - No credentials or API keys are stored in this repository
-- Install scripts write only to user-level directories (`~/.claude/`)
+- Install scripts write only to user-level directories (`~/.copilot/`)
 - Python dependencies install in isolated virtual environments

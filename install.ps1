@@ -82,8 +82,8 @@ try {
 }
 
 # Set paths
-$SkillDir = "$env:USERPROFILE\.claude\skills\seo"
-$AgentDir = "$env:USERPROFILE\.claude\agents"
+$SkillDir = "$env:USERPROFILE\.copilot\skills\seo"
+$AgentDir = "$env:USERPROFILE\.copilot\agents"
 $RepoUrl = "https://github.com/AgriciDaniel/claude-seo"
 # Pin to a specific release tag to prevent silent updates from main.
 # Override: $env:CLAUDE_SEO_TAG = 'main'; .\install.ps1
@@ -123,7 +123,7 @@ try {
     $SkillsPath = "$TempDir\skills"
     if (Test-Path $SkillsPath) {
         Get-ChildItem -Directory $SkillsPath | ForEach-Object {
-            $target = "$env:USERPROFILE\.claude\skills\$($_.Name)"
+            $target = "$env:USERPROFILE\.copilot\skills\$($_.Name)"
             New-Item -ItemType Directory -Force -Path $target | Out-Null
             Copy-Item -Recurse -Force "$($_.FullName)\*" $target
         }

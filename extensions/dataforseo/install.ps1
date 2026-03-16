@@ -10,7 +10,7 @@ Write-Host "══════════════════════�
 Write-Host ""
 
 # Check prerequisites
-$SeoSkillDir = "$env:USERPROFILE\.claude\skills\seo"
+$SeoSkillDir = "$env:USERPROFILE\.copilot\skills\seo"
 if (-not (Test-Path $SeoSkillDir)) {
     Write-Host "✗ Claude SEO is not installed." -ForegroundColor Red
     Write-Host "  Install it first: irm https://raw.githubusercontent.com/AgriciDaniel/claude-seo/main/install.ps1 | iex"
@@ -73,9 +73,9 @@ if (Test-Path "$ScriptDir\skills\seo-dataforseo\SKILL.md") {
 }
 
 # Set paths
-$SkillDir = "$env:USERPROFILE\.claude\skills\seo-dataforseo"
-$AgentDir = "$env:USERPROFILE\.claude\agents"
-$SettingsFile = "$env:USERPROFILE\.claude\settings.json"
+$SkillDir = "$env:USERPROFILE\.copilot\skills\seo-dataforseo"
+$AgentDir = "$env:USERPROFILE\.copilot\agents"
+$SettingsFile = "$env:USERPROFILE\.copilot\settings.json"
 $FieldConfigPath = "$SeoSkillDir\dataforseo-field-config.json"
 
 # Install skill
@@ -134,7 +134,7 @@ print('  ok')
         Write-Host "  ✓ MCP server configured in settings.json" -ForegroundColor Green
     } else {
         Write-Host "  ⚠  Could not auto-configure MCP server." -ForegroundColor Yellow
-        Write-Host "  Add the dataforseo server manually to ~\.claude\settings.json"
+        Write-Host "  Add the dataforseo server manually to ~\.copilot\settings.json"
     }
 } else {
     Write-Host "  ⚠  Python not found. Configure MCP server manually." -ForegroundColor Yellow

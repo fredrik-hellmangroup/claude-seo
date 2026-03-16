@@ -9,8 +9,8 @@ function Write-Color($Color, $Text) {
 }
 
 function Main {
-    $SkillDir = Join-Path $env:USERPROFILE ".claude" "skills"
-    $AgentDir = Join-Path $env:USERPROFILE ".claude" "agents"
+    $SkillDir = Join-Path $env:USERPROFILE ".copilot" "skills"
+    $AgentDir = Join-Path $env:USERPROFILE ".copilot" "agents"
 
     Write-Color Cyan "=== Uninstalling claude-seo ==="
     Write-Host ""

@@ -3,7 +3,7 @@ set -euo pipefail
 
 # Pre-commit SEO validation hook for Claude Code.
 #
-# Hook configuration in ~/.claude/settings.json:
+# Hook configuration in ~/.copilot/settings.json:
 # {
 #   "hooks": {
 #     "PreToolUse": [
@@ -12,7 +12,7 @@ set -euo pipefail
 #         "hooks": [
 #           {
 #             "type": "command",
-#             "command": "~/.claude/skills/seo/hooks/pre-commit-seo-check.sh"
+#             "command": "~/.copilot/skills/seo/hooks/pre-commit-seo-check.sh"
 #           }
 #         ]
 #       }

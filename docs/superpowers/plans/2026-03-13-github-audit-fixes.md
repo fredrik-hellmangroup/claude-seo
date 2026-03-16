@@ -80,7 +80,7 @@
   - [Contributing](#contributing)
   ```
 - [ ] Fix architecture block (line 181 after ToC insertion — find by content):
-  - Change `~/.claude/agents/seo-*.md     # Subagents (6 total)` → `~/.claude/agents/seo-*.md     # Subagents (7 total)`
+  - Change `~/.copilot/agents/seo-*.md     # Subagents (6 total)` → `~/.copilot/agents/seo-*.md     # Subagents (7 total)`
 - [ ] Verify no other "6 total" or "6 subagent" strings remain:
   `grep -n "6 total\|6 subagent" README.md`
 - [ ] Commit:

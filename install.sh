@@ -5,8 +5,8 @@ set -euo pipefail
 # Wraps everything in main() to prevent partial execution on network failure
 
 main() {
-    SKILL_DIR="${HOME}/.claude/skills/seo"
-    AGENT_DIR="${HOME}/.claude/agents"
+    SKILL_DIR="${HOME}/.copilot/skills/seo"
+    AGENT_DIR="${HOME}/.copilot/agents"
     REPO_URL="https://github.com/AgriciDaniel/claude-seo"
     # Pin to a specific release tag to prevent silent updates from main.
     # Override: CLAUDE_SEO_TAG=main bash install.sh
@@ -50,7 +50,7 @@ main() {
     if [ -d "${TEMP_DIR}/claude-seo/skills" ]; then
         for skill_dir in "${TEMP_DIR}/claude-seo/skills"/*/; do
             skill_name=$(basename "${skill_dir}")
-            target="${HOME}/.claude/skills/${skill_name}"
+            target="${HOME}/.copilot/skills/${skill_name}"
             mkdir -p "${target}"
             cp -r "${skill_dir}"* "${target}/"
         done

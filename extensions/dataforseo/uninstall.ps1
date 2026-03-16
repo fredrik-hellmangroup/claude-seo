@@ -5,24 +5,24 @@ $ErrorActionPreference = "Stop"
 Write-Host "→ Uninstalling DataForSEO extension..." -ForegroundColor Yellow
 
 # Remove skill
-if (Test-Path "$env:USERPROFILE\.claude\skills\seo-dataforseo") {
-    Remove-Item -Recurse -Force "$env:USERPROFILE\.claude\skills\seo-dataforseo"
+if (Test-Path "$env:USERPROFILE\.copilot\skills\seo-dataforseo") {
+    Remove-Item -Recurse -Force "$env:USERPROFILE\.copilot\skills\seo-dataforseo"
 }
 
 # Remove agent
-$agentFile = "$env:USERPROFILE\.claude\agents\seo-dataforseo.md"
+$agentFile = "$env:USERPROFILE\.copilot\agents\seo-dataforseo.md"
 if (Test-Path $agentFile) {
     Remove-Item -Force $agentFile
 }
 
 # Remove field config
-$fieldConfig = "$env:USERPROFILE\.claude\skills\seo\dataforseo-field-config.json"
+$fieldConfig = "$env:USERPROFILE\.copilot\skills\seo\dataforseo-field-config.json"
 if (Test-Path $fieldConfig) {
     Remove-Item -Force $fieldConfig
 }
 
 # Remove MCP server entry from settings.json
-$settingsFile = "$env:USERPROFILE\.claude\settings.json"
+$settingsFile = "$env:USERPROFILE\.copilot\settings.json"
 if (Test-Path $settingsFile) {
     $python = Get-Command -Name python -ErrorAction SilentlyContinue
     if ($null -eq $python) {
@@ -48,10 +48,10 @@ if 'mcpServers' in settings and 'dataforseo' in settings['mcpServers']:
         if ($LASTEXITCODE -eq 0) {
             Write-Host "  ✓ Removed dataforseo from settings.json" -ForegroundColor Green
         } else {
-            Write-Host "  ⚠  Could not auto-remove MCP config. Remove 'dataforseo' from ~\.claude\settings.json manually." -ForegroundColor Yellow
+            Write-Host "  ⚠  Could not auto-remove MCP config. Remove 'dataforseo' from ~\.copilot\settings.json manually." -ForegroundColor Yellow
         }
     } else {
-        Write-Host "  ⚠  Python not found. Remove 'dataforseo' from ~\.claude\settings.json manually." -ForegroundColor Yellow
+        Write-Host "  ⚠  Python not found. Remove 'dataforseo' from ~\.copilot\settings.json manually." -ForegroundColor Yellow
     }
 }
 

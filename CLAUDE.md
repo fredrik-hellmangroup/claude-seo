@@ -73,7 +73,7 @@ claude-seo/
 - Scripts must have docstrings, CLI interface, and JSON output
 - Follow kebab-case naming for all skill directories
 - Agents invoked via Task tool with `context: fork`, never via Bash
-- Python dependencies install into `~/.claude/skills/seo/.venv/`
+- Python dependencies install into `~/.copilot/skills/seo/.venv/`
 - Test with `python -m pytest tests/` after changes (if applicable)
 
 ## Key Principles

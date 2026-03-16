@@ -42,7 +42,7 @@ DataForSEO uses a credit-based system:
 
 ## 4. Manual MCP Configuration
 
-If the installer's auto-configuration fails, add this to `~/.claude/settings.json`:
+If the installer's auto-configuration fails, add this to `~/.copilot/settings.json`:
 
 ```json
 {
@@ -54,7 +54,7 @@ If the installer's auto-configuration fails, add this to `~/.claude/settings.jso
         "DATAFORSEO_USERNAME": "your-email@example.com",
         "DATAFORSEO_PASSWORD": "your-api-password",
         "ENABLED_MODULES": "SERP,KEYWORDS_DATA,ONPAGE,DATAFORSEO_LABS,BACKLINKS,DOMAIN_ANALYTICS,BUSINESS_DATA,CONTENT_ANALYSIS,AI_OPTIMIZATION",
-        "FIELD_CONFIG_PATH": "/home/youruser/.claude/skills/seo/dataforseo-field-config.json"
+        "FIELD_CONFIG_PATH": "/home/youruser/.copilot/skills/seo/dataforseo-field-config.json"
       }
     }
   }

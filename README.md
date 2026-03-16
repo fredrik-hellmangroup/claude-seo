@@ -191,9 +191,9 @@ New for 2026 - optimize for:
 ## Architecture
 
 ```
-~/.claude/skills/seo/         # Main skill
-~/.claude/skills/seo-*/       # Sub-skills (12 total)
-~/.claude/agents/seo-*.md     # Subagents (7 total)
+~/.copilot/skills/seo/         # Main skill
+~/.copilot/skills/seo-*/       # Sub-skills (12 total)
+~/.copilot/agents/seo-*.md     # Subagents (7 total)
 ```
 
 ### Video & Live Schema (New)

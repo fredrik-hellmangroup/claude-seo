@@ -29,7 +29,7 @@ cd claude-seo
 The installer will:
 1. Prompt for your DataForSEO username and password
 2. Install the skill and agent files
-3. Configure the MCP server in `~/.claude/settings.json`
+3. Configure the MCP server in `~/.copilot/settings.json`
 4. Pre-download the `dataforseo-mcp-server` npm package
 
 ## Commands
@@ -132,7 +132,7 @@ When installed, other Claude SEO skills automatically detect DataForSEO availabi
 
 ### MCP server not connecting
 
-1. Check credentials: `cat ~/.claude/settings.json | grep DATAFORSEO`
+1. Check credentials: `cat ~/.copilot/settings.json | grep DATAFORSEO`
 2. Test manually: `npx -y dataforseo-mcp-server`
 3. Re-run installer: `./extensions/dataforseo/install.sh`
 
